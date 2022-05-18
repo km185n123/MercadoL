@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/searchFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.ecommerce.feature.articles.presentation.ui.fragment.SearchFragment"
+        android:label="Prueba de Ingreso"
+        app:popUpToInclusive="true"
+        tools:layout="@layout/search_fragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_articlesFragment"
+            app:destination="@id/articlesFragment"
+            app:popUpTo="@id/searchFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_searchFragment_to_messageFragment"
+            app:destination="@id/messageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articlesFragment"
+        android:name="com.example.ecommerce.feature.articles.presentation.ui.fragment.ArticlesFragment"
+        android:label="fragment_articles"
+        tools:layout="@layout/fragment_articles" >
+        <argument
+            android:name="category"
+            app:argType="string"
+            android:defaultValue='""' />
+        <action
+            android:id="@+id/action_articlesFragment_to_articleActivity"
+            app:destination="@id/articleActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/articleActivity"
+        android:name="com.example.ecommerce.feature.articles.presentation.ui.ArticleActivity"
+        android:label="activity_article"
+        tools:layout="@layout/activity_article" >
+        <argument
+            android:name="title"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="image"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="price"
+            app:argType="string"
+            app:nullable="true" />
+    </activity>
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.example.ecommerce.feature.articles.presentation.ui.fragment.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
+</navigation>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Mercado Libre</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_product">Productos</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="label_btn_more">VER PUBLICACIONES</string>
+    <string name="label_hint_txt_filter">buscar usuario</string>
+    <string name="label_txt_empty">No encontramos publicaciones</string>
+    <string name="label_txt_empty2">Revisa que la palabra esté bien escrita.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
